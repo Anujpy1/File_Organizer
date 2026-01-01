@@ -3,17 +3,17 @@ import shutil
 
 path = input('Please enter the path of the folder: ')
 
-if (not os.path.exists(fr'{path}\Images')):
-    os.mkdir(fr'{path}\Images')
+if (not os.path.join(path, 'Images')):
+    os.mkdir(os.path.join(path, 'Images'))
 
-if (not os.path.exists(fr'{path}\Documents')):
-    os.mkdir(fr'{path}\Documents')
+if (not os.path.join(path, 'Documents')):
+    os.mkdir(os.path.join(path, 'Documents'))
 
-if (not os.path.exists(fr'{path}\Videos')):
-    os.mkdir(fr'{path}\Videos')
+if (not os.path.join(path, 'Videos')):
+    os.mkdir(os.path.join(path, 'Videos'))
 
-if (not os.path.exists(fr'{path}\Others')):
-    os.mkdir(fr'{path}\Others')
+if (not os.path.join(path, 'Others')):
+    os.mkdir(os.path.join(path, 'Others'))
 
 files = os.listdir(fr'{path}')
 
